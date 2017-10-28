@@ -17,7 +17,7 @@ import br.com.local.demoroom.persistencia.entidades.Usuario;
 public interface TrofeuDAO {
 
     @Query("SELECT * from trofeu WHERE userId = :userId")
-    List<Trofeu> buscaTrofeu();
+    List<Trofeu> buscaTrofeu(String userId);
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -15,7 +15,7 @@ public interface UsuarioDAO {
     @Query("SELECT * from Usuario")
     List<Usuario> buscarTodos();
 
-    @Query("SELECT * from Usuario WERE id = :userId")
+    @Query("SELECT * from Usuario WHERE id = :userId")
     List<Usuario> buscarPor(int userId);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
